@@ -6,19 +6,19 @@ import { cancel, confirm, intro, isCancel, log, note, outro, select, spinner, te
 import { downloadTemplate } from 'giget'
 
 const presets = [
-  { label: 'Next.js + ESLint', value: 'github:StoryTW/nextjs-template-by-story#main' },
-  { label: 'Vite + ESLint', value: 'github:StoryTW/vite-template-by-story#main' },
-  // { label: 'Vite + Oxlint', value: 'github:StoryTW/vite-oxlint-template-by-story#main' },
+  { label: 'Vite + ESLint', value: 'github:StoryTW/vite-eslint-template#main' },
+  { label: 'Vite + Oxlint', value: 'github:StoryTW/vite-oxlint-template#main' },
+  { label: 'Next.js + ESLint', value: 'github:StoryTW/nextjs-eslint-template#main' },
 ]
 
 async function main() {
   if (!process.stdin.isTTY) {
-    log.error('Run create-story in an interactive terminal.')
+    log.error('Run create-story-cli in an interactive terminal.')
     process.exitCode = 1
     return
   }
 
-  intro('create-story')
+  intro('create-story-cli')
 
   const template = await select({
     message: 'Template',
