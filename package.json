@@ -1,0 +1,37 @@
+{
+  "name": "@storytw/create-story",
+  "version": "0.1.0",
+  "description": "CLI for templates by Story",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "create-story": "./dist/cli.mjs"
+  },
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": "^22.18.0 || ^24.11.0 || >=26.0.0"
+  },
+  "scripts": {
+    "build": "tsdown",
+    "typecheck": "tsc --noEmit",
+    "prepack": "npm run build"
+  },
+  "dependencies": {
+    "@clack/prompts": "1.9.0",
+    "giget": "3.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "26.6.6",
+    "tsdown": "0.23.7",
+    "typescript": "6.0.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/StoryTW/create-story.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
